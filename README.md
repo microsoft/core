@@ -1,3 +1,6 @@
+# Use the correct GitHub Repository instead of this repo
+https://github.com/dotnet/core
+
 # .NET Core Home
 
 The core repository is the starting point to engage in and learn about the
