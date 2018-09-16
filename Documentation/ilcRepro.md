@@ -1,5 +1,4 @@
 # .NET Native Internal Compiler Errors
-
 It looks like you probably hit a bug in .NET Native.
 You can help make .NET better by sending a bug report.
 However, take a look at the [Known Issues](#known-issues) section below
@@ -21,21 +20,17 @@ For help with any other issues, please share their details at https://connect.mi
 This error shows up in applications with a native code component:
 `API CoCreateInstance in api-ms-win-core-com-l1-1-1.dll is not supported for this application type. SomeBinary.dll calls this API.`
 This error can occur when running the WACK with your application in Release configuration and "Optimize Code" unchecked in your project properties. Ensure that "Optimize Code" is checked when submitting your application to the Store.
-
 ### Application was too large to be compiled in the Store
 Some apps may successfully compile with the .NET Native Toolchain during development but fail to compile in Store due to their size. This issue has been mitigated with the release of the .NET Native Toolchain included in the Windows 10 Tools 1.1 Update.
 
 You can see which version of the .NET Native Toolchain you have by opening AppxManifest.xml in the app package you submitted to Store and looking for `<build:Item Name="ilc.exe" Version="1.0.#####.00>`.  The initial release has version 1.0.23117.00, whereas the updated version in the Windows 10 Tools 1.1 update is 1.0.23303.00.
 
 ### Compilation Failure on Update 1
-
 The error:
-
     RHBIND : error RHB0011: Internal error: 'declModule == m_pLoaderModule' at 'f:\dd\ndp\rh\src\tools\rhbind\methodtable.h:606'
 
 A new .NET Native feature “SharedLibrary.dll” can expose an a bug in one of the compiler components "RHBind.exe". SharedLibrary is on be default for Update 1 but you can disable this feature to work around the issue by manipulating/adding this property to your project:
 <UseDotNetNativeSharedAssemblyFrameworkPackage>false</UseDotNetNativeSharedAssemblyFrameworkPackage>
-
 This will be fixed for Update 2 but anyone hitting this error will need to disable the SharedLibrary component until then. For more information about shared library please see: http://blogs.msdn.com/b/dotnet/archive/2015/09/28/what-s-new-for-net-and-uwp-in-win10-tools-1-1.aspx
 ### Other Known Issues
 See: https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues
@@ -107,9 +102,7 @@ Below are examples of where to add the `<NetNativeReproPath>` tag.
 	  </PropertyGroup>
 	  ⋮
 	</Project>
-
 ### JS (*.jsproj)
-
 	<?xml version="1.0" encoding="utf-8"?>
 	<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	  ⋮  <PropertyGroup>
