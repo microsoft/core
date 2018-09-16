@@ -8,18 +8,14 @@ namespace DotnetBot
                 {
                         string message = "";
                         if (args.Length < 1) 
-                        {
-                          message = "Welcome to .NET Core!";
-                        } else 
+                        { message = "Welcome to .NET Core!";}
+                         else 
                         {
                           foreach (string item in args) 
-                          {
-                            message += item; 
-                          }
+                          {message += item;}
                         }
                         Console.WriteLine(GetBot(message));
                 }
-
                 public static string GetBot(string message) 
                 {
                         string bot = "\n" + "        " + message;
@@ -63,9 +59,8 @@ namespace DotnetBot
         .....
 
 ";
-                        return bot;
+                       return bot;
                 }
-
 
         }
 }
