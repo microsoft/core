@@ -1,0 +1,13 @@
+{
+  "name": "throw",
+  "scripts": {
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "./nothing.js": "link dst.js",
+    "./nothing/*.css": "link dest/*.min.css"
+  },
+  "dependencies": {
+    "postinstall": "../../../"
+  }
+}

@@ -1,5 +1,4 @@
 using System;
-
 namespace DotnetBot
 {
     public static class Program
@@ -8,18 +7,13 @@ namespace DotnetBot
                 {
                         string message = "";
                         if (args.Length < 1) 
-                        {
-                          message = "Welcome to .NET Core!";
-                        } else 
+                        { message = "Welcome to .NET Core!";}
+                         else 
                         {
                           foreach (string item in args) 
-                          {
-                            message += item; 
-                          }
-                        }
-                        Console.WriteLine(GetBot(message));
+                          {message += item;}
+                        };Console.WriteLine(GetBot(message));
                 }
-
                 public static string GetBot(string message) 
                 {
                         string bot = "\n" + "        " + message;
@@ -62,10 +56,8 @@ namespace DotnetBot
        .........                        ..............
         .....
 
-";
-                        return bot;
+"; return bot;
                 }
-
 
         }
 }

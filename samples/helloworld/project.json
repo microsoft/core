@@ -1,4 +1,8 @@
 ﻿{
+    "name":"hello world",
+    "description":"code for hello wordl .net core",
+    "license":"MIT",
+    "private":true,
     "version": "1.0.0-*",
     "buildOptions": {
         "emitEntryPoint": true
@@ -8,7 +12,7 @@
         "type": "platform",
         "version": "1.0.0-rc2-3002700"
         }
-    },
+    },"devDependencies":{},
     "frameworks": {
         "netcoreapp1.0": {
             "imports": "dnxcore50"

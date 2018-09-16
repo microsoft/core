@@ -1,0 +1,17 @@
+{
+  "generator-init-enhanced": {
+    "name": "coredonet",
+    "license": "MIT",
+    "author": "",
+    "email": "",
+    "url": "",
+    "main": "index.js",
+    "scripts": "",
+    "private": false,
+    "username": ""
+  },
+  "generator-mocha": {
+    "ui": "bdd",
+    "rjs": false
+  }
+}
