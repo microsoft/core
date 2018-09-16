@@ -1,12 +1,8 @@
 # Release Notes
-
 ## RC1 released 11/18/2015
-
 Full details on this release can be read about in this blog post:
 [Announcing .NET Core and ASP.NET 5 RC](http://aka.ms/netcorerc)
-
 Supported platforms for this release are Ubuntu 14.04 LTS, OS X 10.10, and Windows 7+.
-
 ### Dependencies
 .NET Core RC1 on Linux and OSX take dependencies on the following libraries:
 * libc, librt: I/O, process management, time, etc.
@@ -33,7 +29,6 @@ Supported platforms for this release are Ubuntu 14.04 LTS, OS X 10.10, and Windo
 * Runtime performance improvements
 * Native eventing support via LTTNG for Linux
 * Added 2800 Windows tests
-
 ### BCL
 * More complete `System.Globalization` support on Linux and OSX
 * IDNA2008 support for internationalized domain names
@@ -42,7 +37,7 @@ Supported platforms for this release are Ubuntu 14.04 LTS, OS X 10.10, and Windo
 * CryptographicException contains both the numeric code (via the HResult property) and
   the message instead of the code only on Windows and the message only on Unix
 * System.IO 260 character (MAX_PATH) length limit removed on all OS (.NET Core only)
-  
+
 ### Network
 * `System.Net.Http`, `System.Net.Primitives`, `System.Net.NameResolution`, and
   `System.Net.Sockets` implement most features

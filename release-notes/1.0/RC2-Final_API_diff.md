@@ -1,7 +1,5 @@
 # API Diff between RC2 and 1.0.0 final
-
-API listing follows standard diff formatting. Lines preceded by a '+' are additions and a '-' indicates removal.
-
+listing follows standard diff formatting. Lines preceded by a '+' are additions and a '-' indicates removal.
 - [System](#system)
 - [System.Buffers](#systembuffers)
 - [System.ComponentModel](#systemcomponentmodel)
@@ -25,9 +23,7 @@ API listing follows standard diff formatting. Lines preceded by a '+' are additi
 - [System.ServiceModel.Security](#systemservicemodelsecurity)
 - [System.Text.RegularExpressions](#systemtextregularexpressions)
 - [System.Threading.Tasks](#systemthreadingtasks)
-
 ## System
-
 ```c#
  namespace System {
 + public class UriTypeConverter : TypeConverter {
@@ -39,9 +35,7 @@ API listing follows standard diff formatting. Lines preceded by a '+' are additi
   }
  }
 ```
-
 ## System.Buffers
-
 ```c#
  namespace System.Buffers {
   public abstract class ArrayPool<T> {
