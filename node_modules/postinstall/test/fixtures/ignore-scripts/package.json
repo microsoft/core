@@ -1,0 +1,12 @@
+{
+  "name": "ignore-scripts",
+  "scripts": {
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "./src/other.js": "copy dest/file.js"
+  },
+  "dependencies": {
+    "postinstall": "../../../"
+  }
+}

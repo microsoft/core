@@ -9,5 +9,9 @@
     "scripts": "",
     "private": false,
     "username": ""
+  },
+  "generator-mocha": {
+    "ui": "bdd",
+    "rjs": false
   }
 }

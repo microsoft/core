@@ -1,0 +1,25 @@
+.DS_Store
+node_modules
+*.sock
+*.sw*
+.idea
+*.iml
+*.patch
+*.diff
+npm-debug.log*
+.envrc
+.karma/
+*.orig
+.nyc_output/
+coverage/
+yarn.lock
+/mocha.js
+# artifacts from various diff tools
+*_BACKUP_*
+*_BASE_*
+*_LOCAL_*
+*_REMOTE_*
+docs/_site
+docs/_dist
+docs/api
+.vscode/

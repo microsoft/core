@@ -1,0 +1,14 @@
+{
+  "name": "dep-file",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "sample/dist/test.js": "link test.js"
+  },
+  "dependencies": {
+    "postinstall": "../../../",
+    "sample": "file:../sample"
+  }
+}

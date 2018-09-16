@@ -1,0 +1,21 @@
+{
+  "name": "whitelist",
+  "scripts": {
+    "postinstall": "postinstall --allow=link"
+  },
+  "postinstall": {
+    "./src.js": "link dst.js",
+    "./src/other.js": "copy dest/file.js",
+    "./src/*": "copy dest/rec/",
+    "./lib/*.css": "link dest/*.min.css",
+    "./lib/*.js": "concat dest/bundle.js",
+    "./lib/": {
+      "command": "concat",
+      "output": "dest/texts.txt",
+      "list": ["text2.txt", "text1.txt"]
+    }
+  },
+  "dependencies": {
+    "postinstall": "../../../"
+  }
+}

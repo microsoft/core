@@ -1,0 +1,13 @@
+{
+  "name": "dep-dep-file",
+  "scripts": {
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "dep-file/test.js": "link second/test.js"
+  },
+  "dependencies": {
+    "postinstall": "../../../",
+    "dep-file": "file:../dep-file"
+  }
+}
