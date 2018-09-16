@@ -24,11 +24,9 @@ This error can occur when running the WACK with your application in Release conf
 Some apps may successfully compile with the .NET Native Toolchain during development but fail to compile in Store due to their size. This issue has been mitigated with the release of the .NET Native Toolchain included in the Windows 10 Tools 1.1 Update.
 
 You can see which version of the .NET Native Toolchain you have by opening AppxManifest.xml in the app package you submitted to Store and looking for `<build:Item Name="ilc.exe" Version="1.0.#####.00>`.  The initial release has version 1.0.23117.00, whereas the updated version in the Windows 10 Tools 1.1 update is 1.0.23303.00.
-
 ### Compilation Failure on Update 1
 The error:
     RHBIND : error RHB0011: Internal error: 'declModule == m_pLoaderModule' at 'f:\dd\ndp\rh\src\tools\rhbind\methodtable.h:606'
-
 A new .NET Native feature “SharedLibrary.dll” can expose an a bug in one of the compiler components "RHBind.exe". SharedLibrary is on be default for Update 1 but you can disable this feature to work around the issue by manipulating/adding this property to your project:
 <UseDotNetNativeSharedAssemblyFrameworkPackage>false</UseDotNetNativeSharedAssemblyFrameworkPackage>
 This will be fixed for Update 2 but anyone hitting this error will need to disable the SharedLibrary component until then. For more information about shared library please see: http://blogs.msdn.com/b/dotnet/archive/2015/09/28/what-s-new-for-net-and-uwp-in-win10-tools-1-1.aspx
@@ -58,8 +56,7 @@ Below are examples of where to add the `<NetNativeReproPath>` tag.
 	    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
 	    <PackageCertificateKeyFile>App1_TemporaryKey.pfx</PackageCertificateKeyFile>
 	    <NetNativeReproPath>C:\myRepro</NetNativeReproPath>
-	  </PropertyGroup>
-	  ⋮	</Project>
+	  </PropertyGroup>⋮	</Project>
 ### VB (*.vbproj)
 	<?xml version="1.0" encoding="utf-8"?>
 	<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -76,14 +73,12 @@ Below are examples of where to add the `<NetNativeReproPath>` tag.
 	    <TargetPlatformVersion>10.0.10158.0</TargetPlatformVersion>
 	    <TargetPlatformMinVersion>10.0.10158.0</TargetPlatformMinVersion>
 	    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
-	    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+	  <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
 	    <FileAlignment>512</FileAlignment>
 	    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
 	    <PackageCertificateKeyFile>App4_TemporaryKey.pfx</PackageCertificateKeyFile>
 	    <NetNativeReproPath>C:\myRepro</NetNativeReproPath>
-	  </PropertyGroup>
-	  ⋮
-	</Project>
+	  </PropertyGroup>⋮</Project>
 ### C++ (*.vcxproj)
 	<?xml version="1.0" encoding="utf-8"?>
 	<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -97,16 +92,13 @@ Below are examples of where to add the `<NetNativeReproPath>` tag.
 	    <WindowsTargetPlatformVersion>10.0.10158.0</WindowsTargetPlatformVersion>
 	    <WindowsTargetPlatformMinVersion>10.0.10158.0</WindowsTargetPlatformMinVersion>
 	    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
-	    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+	  <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
 	    <NetNativeReproPath>C:\myRepro</NetNativeReproPath>
-	  </PropertyGroup>
-	  ⋮
-	</Project>
+	  </PropertyGroup>⋮</Project>
 ### JS (*.jsproj)
 	<?xml version="1.0" encoding="utf-8"?>
-	<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	  ⋮  <PropertyGroup>
-	    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+	<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> ⋮  <PropertyGroup>
+	  <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
 	    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
 	    <TargetPlatformVersion>10.0.10158.0</TargetPlatformVersion>
 	    <TargetPlatformMinVersion>10.0.10158.0</TargetPlatformMinVersion>
@@ -114,5 +106,4 @@ Below are examples of where to add the `<NetNativeReproPath>` tag.
 	    <DefaultLanguage>en-US</DefaultLanguage> 
 	    <PackageCertificateKeyFile>App3_TemporaryKey.pfx</PackageCertificateKeyFile>
 	    <NetNativeReproPath>C:\myRepro</NetNativeReproPath>
-	  </PropertyGroup>
-	  ⋮	</Project>
+	  </PropertyGroup>⋮	</Project>

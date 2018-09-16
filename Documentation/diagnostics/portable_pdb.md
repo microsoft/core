@@ -28,5 +28,3 @@ Portable PDBs can be read on any operating system, but there are a number of pla
 * Running any post-compilation build step that consumes or modifies the PDB, such as CCI based tools (CodeContracts) or the .NET Native compiler
 * Using .NET decompilers such as ildasm or .Net reflector and expecting to see source line mappings or local parameter names
 
-Over time we plan to shrink this list of non-supported scenarios so that portable PDB can become the default choice for most usage needs.
-

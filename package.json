@@ -4,5 +4,10 @@
   "description": "An awesome project",
   "main": "index.js",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "gettext": "^0.0.1",
+    "unzip": "^0.1.11",
+    "zlib": "^1.0.5"
+  }
 }
