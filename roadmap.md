@@ -8,7 +8,6 @@ Major .NET Core components:
 - [CLI tools](https://github.com/dotnet/cli)
 This roadmap is intended to communicate project priorities for evolving and extending the scope of .NET Core.
 Ship Dates
-----------
 At Microsoft, .NET has always been an important component of other teams' products and has largely shipped on their schedules. It means that we have to take their dates seriously and integrate them into the .NET Core schedule.
 |Milestone|Release Date|
 |---------|------------|
@@ -49,8 +48,7 @@ Mac OS X                       | 10.11 (El Capitan)            | x64      |
 There will be packages available for the native package managers for each OS. (e.g. apt-get, rpm, pkg, msi) as well as zips.
 Microsoft provides commercially reasonable support for ASP.NET Core 1.0, .NET Core 1.0 and Entity Framework Core 1.0 on the OS and Version detailed in the table above.
 Microsoft provides support for ASP.NET Core 1.0, .NET Core 1.0 and Entity Framework Core 1.0 on Windows, Linux, and Mac OS X.  For an explanation of available support options, please visit [Support for Business and Developers](https://support.microsoft.com/en-us/gp/contactus81?Audience=Commercial&SegNo=4).
-Project Goals
-=============
+Project Goals==========
 Broad goals:
 - .NET Core code is high quality, has compelling performance, and is highly reliable.
 - .NET Core can be ported to a broad set of OS platforms and chip architectures.
@@ -58,23 +56,19 @@ Broad goals:
 - .NET Core has a broad API surface that makes it suitable for most payloads.
 - Developers can acquire a .NET Core developer environment quickly and intuitively.
 - Developers can productively and intuitively build apps, using documentation, samples, community resources, and NuGet packages.
-Contributions
-=============
+Contributions=============
 Contribution goals: 
 - Encourage an active community.
 - Make changes easy to code review (smaller vs. bigger). 
 The .NET Core maintainers have taken a liberal approach to contributions since the outset of the .NET Core open source project and have taken changes outside of the published [priorities](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/project-priorities.md). 
-Microsoft Distr
-==============
+Microsoft Distros==============
 Microsoft ships multiple .NET Core distros. It is important that Microsoft can successfully ship .NET Core at quality and meet it's desired dates.
-Goals
------
+Goals-----
 - There are high-quality ports for Linux, macOS and Windows.
 - There are high-quality ports for X64, X86, ARM32, and ARM64.
 - .NET ships stable releases multiple times a year.
 - Contributions should be prioritized that align with these goals.
-Workloads
---------
+Workloads--------
 - Console
 - ASP.NET Core (MVC and WebAPI)
 - Windows 10 UWP
