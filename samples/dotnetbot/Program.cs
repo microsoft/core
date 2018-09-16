@@ -1,5 +1,4 @@
 using System;
-
 namespace DotnetBot
 {
     public static class Program
@@ -13,8 +12,7 @@ namespace DotnetBot
                         {
                           foreach (string item in args) 
                           {message += item;}
-                        }
-                        Console.WriteLine(GetBot(message));
+                        };Console.WriteLine(GetBot(message));
                 }
                 public static string GetBot(string message) 
                 {
@@ -58,8 +56,7 @@ namespace DotnetBot
        .........                        ..............
         .....
 
-";
-                       return bot;
+"; return bot;
                 }
 
         }

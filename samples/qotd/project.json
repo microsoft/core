@@ -1,5 +1,8 @@
 {
-    "name": "qotd",
+  "name":"qotd",
+  "description":"code for hello wordl .net core",
+  "license":"MIT",
+  "private":true,
     "version": "1.0.0",
     "buildOptions": {
         "emitEntryPoint": true
