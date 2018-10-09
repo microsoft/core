@@ -1,18 +1,15 @@
 ﻿{
+    "name":"dotnetbot",
+    "licence":"MIT",
+    "description":"machine learning  .net",
     "version": "1.0.0-*",
-    "buildOptions": {
-        "emitEntryPoint": true
-    },
-
-    "dependencies": {
+    "buildOptions": {"emitEntryPoint": true},
+     "dependencies": {
         "Microsoft.NETCore.App": {
         "type": "platform",
         "version": "1.0.0-rc2-3002700"
         }
     },
-    "frameworks": {
-        "netcoreapp1.0": {
-            "imports": "dnxcore50"
-        }
-    }
+    "devDependencies":{},
+    "frameworks": { "netcoreapp1.0": {"imports": "dnxcore50"}
 }
